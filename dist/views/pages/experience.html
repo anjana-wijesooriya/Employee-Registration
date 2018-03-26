@@ -1,0 +1,46 @@
+<section class="content">
+    <!-- row -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- The time line -->
+            <ul class="timeline" ng-controller="ExperienceCtrl as experience">
+                <ul class="timeline" ng-repeat="_career in experience track by $index">
+                    <li class="time-label">
+                        <span class="{{ _career.Color }}">
+                            {{ _career.FromDate }} to {{ _career.ToDate }}
+                        </span>
+                    </li>
+                    <li>
+                        <i class="fa fa-suitcase bg-blue-gradient text-white"></i>
+                        <div class="timeline-item">
+                            <span class="time text-bold"> {{ _career.Basis }}</span>
+                            <h3 class="timeline-header">
+                                <a href="#" target="_blank">{{ _career.Designation }} - {{ _career.CompanyName }}</a>
+                            </h3>
+                            <div class="timeline-body">
+                                <ul>
+                                    <li ng-repeat="duty in _career.Resposibilities">
+                                         {{ duty.Description }}
+                                    </li>
+                                </ul>
+                    
+                            </div>
+                            <div class="timeline-footer">
+                                <p>
+                                    <span ng-repeat="skill in _career.Skills" class="label {{ skill.Color }}">{{ skill.SkillName }}</span>
+                                    <!-- <span class="pull-right">
+                                        <a class="btn btn-primary btn-xs" ui-sref="app.recent">View Recent projects</a>
+                                    </span> -->
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <li>
+                    <i class="fa fa-clock-o bg-gray"></i>
+                </li>
+            </ul>
+        </div>
+        <!-- /.col -->
+    </div>
+</section>
