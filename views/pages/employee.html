@@ -1,4 +1,4 @@
-<div class="animated fadeIn">
+<div class="animated fadeIn" ng-controller="EmployeeCtrl as employee">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -387,12 +387,12 @@
                                         <label class="col-md-8 col-form-label" for="inline-radios">Have you worked for SLMC before as either staff or contract/agency employee?</label>
                                         <div class="col-md-4 col-form-label">
                                             <div class="form-check form-check-inline mr-1" id="inline-radios">
-                                                    <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
-                                                    <label class="form-check-label" for="inline-checkbox3">YES</label>
+                                                <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">YES</label>
                                             </div>
                                             <div class="form-check form-check-inline mr-1">
-                                                    <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
-                                                    <label class="form-check-label" for="inline-checkbox3">NO</label>
+                                                <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">NO</label>
                                             </div>
                                         </div>
                                     </div>
@@ -426,12 +426,12 @@
                                         <label class="col-md-6 col-form-label" for="inline-radios">Do you have friends or relatives employed by SLMC?</label>
                                         <div class="col-md-6 col-form-label">
                                             <div class="form-check form-check-inline mr-1" id="inline-radios">
-                                                    <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
-                                                    <label class="form-check-label" for="inline-checkbox3">YES</label>
+                                                <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">YES</label>
                                             </div>
                                             <div class="form-check form-check-inline mr-1">
-                                                    <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
-                                                    <label class="form-check-label" for="inline-checkbox3">NO</label>
+                                                <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">NO</label>
                                             </div>
                                         </div>
                                     </div>
@@ -454,6 +454,583 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    EMPLOYMENT HISTORY
+                </div>
+                <div class="card-body">
+                    <!--/.row-->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="name">NAME OF COMPANY</label>
+                                    <input class="form-control" id="position" ng-model="NameOfCompany" placeholder="ENTER THE POSITION" type="text">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="ccmonth">FROM: Month</label>
+                                                <select class="form-control" id="ccmonth" ng-model="FromMonth">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="ccyear">Year</label>
+                                                <select class="form-control" id="ccyear" ng-model="FromYear">
+                                                    <option>2014</option>
+                                                    <option>2015</option>
+                                                    <option>2016</option>
+                                                    <option>2017</option>
+                                                    <option>2018</option>
+                                                    <option>2019</option>
+                                                    <option>2020</option>
+                                                    <option>2021</option>
+                                                    <option>2022</option>
+                                                    <option>2023</option>
+                                                    <option>2024</option>
+                                                    <option>2025</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group col-sm-12">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="ccmonth">TO: Month</label>
+                                                <select class="form-control" id="ccmonth" ng-model="ToMonth">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="ccyear">Year</label>
+                                                <select class="form-control" id="ccyear" ng-model="ToYear">
+                                                    <option>2014</option>
+                                                    <option>2015</option>
+                                                    <option>2016</option>
+                                                    <option>2017</option>
+                                                    <option>2018</option>
+                                                    <option>2019</option>
+                                                    <option>2020</option>
+                                                    <option>2021</option>
+                                                    <option>2022</option>
+                                                    <option>2023</option>
+                                                    <option>2024</option>
+                                                    <option>2025</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="name">JOB TITLE</label>
+                                    <input class="form-control" id="position" ng-model="EmployerJobTitle" placeholder="ENTER THE TITLE" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="ccnumber">ADDRESS</label>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <input class="form-control" placeholder="STREET" ng-model="EmployerStreet" type="text">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" placeholder="CITY/STATE/ZIP CODE" ng-model="EmployerCity" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="ccnumber">PHONE NO.</label>
+                                    <input class="form-control" placeholder="07* ** *****" type="text" ng-model="EmployerPhone">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="ccnumber">IMMEDIATE SUPERVISOR</label>
+                                    <input class="form-control" placeholder="NAME & TITLE" type="text" ng-model="EmployerSupervisor">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="ccnumber">DUTIES</label>
+                                    <textarea class="form-control" id="textarea-input" ng-model="EmployerDuties" name="textarea-input" placeholder="Content.."
+                                        rows="6"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="ccnumber">REASON FOR LEAVING (Please Explain)</label>
+                                    <textarea class="form-control" id="textarea-input" ng-model="ReasonForLeaving" name="textarea-input" placeholder="Content.."
+                                        rows="6"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="ccnumber">EXPLAIN ANY PERIOD BETWEEN</label>
+                                    <textarea class="form-control" id="textarea-input" ng-model="Explanation" name="textarea-input" placeholder="Content.." rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="form-group row">
+                                        <label class="col-md-6 col-form-label" for="inline-radios">MAY WE CONTACT EMPLOYER?</label>
+                                        <div class="col-md-6 col-form-label">
+                                            <div class="form-check form-check-inline mr-1" id="inline-radios">
+                                                <input class="form-check-input" id="inline-checkbox3" type="radio" ng-model="contactemployer" name="contactemployer" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">YES</label>
+                                            </div>
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox3" type="radio" ng-model="contactemployer" name="contactemployer" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">NO</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group form-actions">
+                                    <button class="btn btn-sm btn-primary" ng-click="AddEmployer();">Add EMPLOYER</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-bordered" id="tbl_employers">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>EMPLOYER</th>
+                                            <th>JOB TITLE</th>
+                                            <th>FROM</th>
+                                            <th>TO</th>
+                                            <th>ACTION</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl_posts_body">
+                                        <tr ng-repeat="emp in employers track by $index">
+                                            <td>
+                                                <span class="sn">{{emp.id}}</span>.</td>
+                                            <td>{{emp.NameOfCompany}}</td>
+                                            <td>{{emp.EmployerJobTitle}}</td>
+                                            <td>{{emp.FromMonth}}/{{emp.FromYear}}</td>
+                                            <td>{{emp.ToMonth}}/{{emp.ToYear}}</td>
+                                            <td>
+                                                <button class="btn btn-success" type="button">
+                                                    <i class="fa fa-edit"></i>&nbsp; EDIT</button>
+                                                <button class="btn btn-danger" type="button">
+                                                    <i class="fa fa-trash-o"></i>&nbsp; DELETE</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    EDUCATION
+                </div>
+                <div class="card-body">
+                    <!--/.row-->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-bordered" id="tbl_employers">
+                                    <thead>
+                                        <tr>
+                                            <td></td>
+                                            <th>NAME, LOCATION & PHONE NUMBER</th>
+                                            <th>COURSE OF STUDY</th>
+                                            <th>NO. OF YEARS</th>
+                                            <th>DEGREE / DIPLOMA RECEIVED</th>
+                                            <th>PROOF OF EDUCATION ATTACHED</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl_posts_body">
+                                        <tr>
+                                            <td>
+                                                <strong>HIGH SCHOOL</strong>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>COLLEGE / UNIVERSITY</strong>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>VOCATIONAL OR TRADE SCHOOL</strong>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>GRADUATE WORK</strong>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                            <td>
+                                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="ccnumber">List any academic, professional, trade or job-related organizations that you are a member</label>
+                                <textarea class="form-control" name="textarea-input" placeholder="Content.." rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    OFFICE / COMPUTER SKILLS (Check the areas that you have skills and knowledge)
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label" for="inline-radios">General Computer Knowledge</label>
+                                    <div class="col-md-8 col-form-label">
+                                        <div class="form-check form-check-inline mr-1" id="inline-radios">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="computer" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Beginner</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="computer" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="computer" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Advanced</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label" for="inline-radios">Microsoft Office</label>
+                                    <div class="col-md-8 col-form-label">
+                                        <div class="form-check form-check-inline mr-1" id="inline-radios">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="msoffice" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Beginner</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="msoffice" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="msoffice" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Advanced</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label" for="inline-radios">Excel Spreadsheets</label>
+                                    <div class="col-md-8 col-form-label">
+                                        <div class="form-check form-check-inline mr-1" id="inline-radios">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="excel" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Beginner</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="excel" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="excel" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Advanced</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label" for="inline-radios">Power Point Presentations</label>
+                                    <div class="col-md-8 col-form-label">
+                                        <div class="form-check form-check-inline mr-1" id="inline-radios">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="powerpoint" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Beginner</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="powerpoint" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="powerpoint" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Advanced</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label" for="inline-radios">Email / Internet Research</label>
+                                    <div class="col-md-8 col-form-label">
+                                        <div class="form-check form-check-inline mr-1" id="inline-radios">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="internet" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Beginner</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="internet" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="internet" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Advanced</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label" for="inline-radios">General Office Equipment: (Fax, Photocopier, Telephone etc.)</label>
+                                    <div class="col-md-8 col-form-label">
+                                        <div class="form-check form-check-inline mr-1" id="inline-radios">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="generaloffice" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">Experience</label>
+                                        </div>
+                                        <div class="form-check form-check-inline mr-1">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="generaloffice" value="option3">
+                                            <label class="form-check-label" for="inline-checkbox3">No Experience</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    REFERENCES
+                </div>
+                <div class="card-body">
+                    <!--/.row-->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td></td>
+                                            <th>NAME</th>
+                                            <th>OCCUPATION</th>
+                                            <th>COMPANY NAME</th>
+                                            <th>PHONE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="">
+                                        <tr>
+                                            <td>
+                                                <strong>1.</strong>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>2.</strong>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong>3.</strong>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" placeholder="" type="text">
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
