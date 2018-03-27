@@ -18,7 +18,7 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="ccnumber">DATE</label>
-                                    <input class="form-control" id="date" placeholder="DD/MM/YYYY" type="text">
+                                    <input class="form-control datepick" id="date" placeholder="DD/MM/YYYY" type="text">
                                 </div>
                             </div>
                         </div>
@@ -49,8 +49,16 @@
                                             <input class="form-control" placeholder="STREET" type="text">
                                         </div>
                                         <div class="col-sm-6">
-                                            <input class="form-control" placeholder="CITY/STATE/ZIP CODE" type="text">
+                                            <input class="form-control" placeholder="CITY CODE" type="text">
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input class="form-control" placeholder="STATE" type="text">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" placeholder="ZIP CODE" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -64,28 +72,35 @@
                                             <input class="form-control" placeholder="STREET" type="text">
                                         </div>
                                         <div class="col-sm-6">
-                                            <input class="form-control" placeholder="CITY/STATE/ZIP CODE" type="text">
+                                            <input class="form-control" placeholder="CITY" type="text">
                                         </div>
+
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input class="form-control" placeholder="STATE" type="text">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" placeholder="ZIP CODE" type="text">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="name">PHONE</label>
                                     <input class="form-control" id="" placeholder="07* ** *****" type="text">
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="ccnumber">ALTERNATE/CELL</label>
                                     <input class="form-control" id="date" placeholder="07* ** *****" type="text">
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="name">Email</label>
                                     <input class="form-control" id="" placeholder="PLEASE ENTER EMAIL" type="text">
@@ -122,40 +137,45 @@
                             <div class="col-sm-12">
                                 <div class="form-group row">
                                     <label class="col-md-12 col-form-label">Availability (Check all that apply)</label>
-                                    <div class="col-md-12 col-form-label">
-                                        <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="option1">
-                                            <label class="form-check-label" for="inline-checkbox1">FULL TIME</label>
+                                    <div class="col-md-12 col-form-label form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="option1">
+                                                <label class="form-check-label" for="inline-checkbox1">FULL TIME</label>
+                                            </div>
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox2" type="checkbox" value="option2">
+                                                <label class="form-check-label" for="inline-checkbox2">PART TIME</label>
+                                            </div>
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">PER DIEM</label>
+                                            </div>
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">OTHER</label>
+                                            </div>
                                         </div>
-                                        <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox2" type="checkbox" value="option2">
-                                            <label class="form-check-label" for="inline-checkbox2">PART TIME</label>
-                                        </div>
-                                        <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
-                                            <label class="form-check-label" for="inline-checkbox3">PER DIEM</label>
-                                        </div>
-                                        <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
-                                            <label class="form-check-label" for="inline-checkbox3">OTHER</label>
-                                        </div>
+
                                     </div>
-                                    <div class="col-md-12 col-form-label">
-                                        <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="option1">
-                                            <label class="form-check-label" for="inline-checkbox1">DAYS</label>
-                                        </div>
-                                        <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox2" type="checkbox" value="option2">
-                                            <label class="form-check-label" for="inline-checkbox2">NIGHTS</label>
-                                        </div>
-                                        <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
-                                            <label class="form-check-label" for="inline-checkbox3">WEEKENDS</label>
-                                        </div>
-                                        <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
-                                            <label class="form-check-label" for="inline-checkbox3">HOLIDAYS</label>
+                                    <div class="col-md-12 col-form-label form-group row">
+                                        <div class="col-md-12">
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="option1">
+                                                <label class="form-check-label" for="inline-checkbox1">DAYS</label>
+                                            </div>
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox2" type="checkbox" value="option2">
+                                                <label class="form-check-label" for="inline-checkbox2">NIGHTS</label>
+                                            </div>
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">WEEKENDS</label>
+                                            </div>
+                                            <div class="form-check form-check-inline mr-1">
+                                                <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="option3">
+                                                <label class="form-check-label" for="inline-checkbox3">HOLIDAYS</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +275,7 @@
                             <div class="col-sm-3">
                                 <div class="form-group">
                                     <label for="ccnumber">Exp. Date</label>
-                                    <input class="form-control" id="date" type="text">
+                                    <input class="form-control datepick" id="date" type="text">
                                 </div>
                             </div>
                             <div class="col-sm-3">
@@ -294,7 +314,7 @@
                             <div class="col-sm-3">
                                 <div class="form-group">
                                     <label for="ccnumber">Exp. Date</label>
-                                    <input class="form-control" id="date" type="text">
+                                    <input class="form-control datepick" id="date" type="text">
                                 </div>
                             </div>
                             <div class="col-sm-3">
@@ -336,7 +356,7 @@
                                         </div>
                                     </div>
                                     <label for="ccnumber">Expires</label>
-                                    <input class="form-control" id="date" type="text">
+                                    <input class="form-control datepick" id="date" type="text">
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -357,7 +377,7 @@
                                         </div>
                                     </div>
                                     <label for="ccnumber">Expires</label>
-                                    <input class="form-control" id="date" type="text">
+                                    <input class="form-control datepick" id="date" type="text">
                                 </div>
                             </div>
                             <div class="col-sm-4">
@@ -400,7 +420,7 @@
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="name">If yes, when?</label>
-                                                <input class="form-control" id="position" type="text">
+                                                <input class="form-control datepick" id="position" type="text">
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
@@ -441,7 +461,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-5 col-form-label" for="input-small">If yes, name/location</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="input-small" name="input-small" placeholder=".form-control-sm" type="text">
+                                        <input class="form-control" id="input-small" name="input-small" placeholder="Location" type="text">
                                     </div>
                                 </div>
                             </div>
@@ -583,10 +603,18 @@
                                             <input class="form-control" placeholder="STREET" ng-model="EmployerStreet" type="text">
                                         </div>
                                         <div class="col-sm-6">
-                                            <input class="form-control" placeholder="CITY/STATE/ZIP CODE" ng-model="EmployerCity" type="text">
+                                            <input class="form-control" placeholder="CITY" ng-model="EmployerCity" type="text">
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                        <div class="col-sm-6">
+                                            <input class="form-control" placeholder="STATE" type="text" ng-model="EmployerState">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" placeholder="ZIP CODE" type="text" ng-model="EmployerZip">
+                                        </div>
+                                    </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="form-group">
@@ -821,15 +849,15 @@
                                     <label class="col-md-4 col-form-label" for="inline-radios">General Computer Knowledge</label>
                                     <div class="col-md-8 col-form-label">
                                         <div class="form-check form-check-inline mr-1" id="inline-radios">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="computer" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="computer" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Beginner</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="computer" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="computer" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="computer" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="computer" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Advanced</label>
                                         </div>
                                     </div>
@@ -867,7 +895,7 @@
                                     <label class="col-md-4 col-form-label" for="inline-radios">Excel Spreadsheets</label>
                                     <div class="col-md-8 col-form-label">
                                         <div class="form-check form-check-inline mr-1" id="inline-radios">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="excel" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="excel" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Beginner</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
@@ -875,7 +903,7 @@
                                             <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="excel" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="excel" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Advanced</label>
                                         </div>
                                     </div>
@@ -890,15 +918,15 @@
                                     <label class="col-md-4 col-form-label" for="inline-radios">Power Point Presentations</label>
                                     <div class="col-md-8 col-form-label">
                                         <div class="form-check form-check-inline mr-1" id="inline-radios">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="powerpoint" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="powerpoint" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Beginner</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="powerpoint" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="powerpoint" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="powerpoint" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="powerpoint" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Advanced</label>
                                         </div>
                                     </div>
@@ -913,11 +941,11 @@
                                     <label class="col-md-4 col-form-label" for="inline-radios">Email / Internet Research</label>
                                     <div class="col-md-8 col-form-label">
                                         <div class="form-check form-check-inline mr-1" id="inline-radios">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="internet" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="internet" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Beginner</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="internet" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="internet" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">Intermediate</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
@@ -940,7 +968,7 @@
                                             <label class="form-check-label" for="inline-checkbox3">Experience</label>
                                         </div>
                                         <div class="form-check form-check-inline mr-1">
-                                            <input class="form-check-input" id="inline-checkbox3" type="radio"  name="generaloffice" value="option3">
+                                            <input class="form-check-input" id="inline-checkbox3" type="radio" name="generaloffice" value="option3">
                                             <label class="form-check-label" for="inline-checkbox3">No Experience</label>
                                         </div>
                                     </div>

@@ -3,6 +3,8 @@
         .controller("EmployeeCtrl", ["$scope", "$log", "$filter", EmployeeCtrl]);
 
     function EmployeeCtrl($scope, $log, $filter) {
+        $('.datepick').datepicker({
+        });
         $scope.employers = [];
         $scope.AddEmployer = function () {
             employer = {
@@ -15,6 +17,8 @@
                 EmployerJobTitle: $scope.EmployerJobTitle,
                 EmployerStreet: $scope.EmployerStreet,
                 EmployerCity: $scope.EmployerCity,
+                EmployerState: $scope.EmployerState,
+                EmployerZip: $scope.EmployerZip,
                 EmployerPhone: $scope.EmployerPhone,
                 EmployerSupervisor: $scope.EmployerSupervisor,
                 EmployerDuties: $scope.EmployerDuties,
@@ -26,5 +30,8 @@
         }
         
     }
+
+    $('.datepick').datepicker({
+    });
 
 }())
