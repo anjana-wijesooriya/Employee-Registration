@@ -116,7 +116,7 @@
                         // }],
                         loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([{
-                                files: ['/js/controllers/EmployeeController.js']
+                                files: ['js/controllers/EmployeeController.js']
                             }])
                         }],
                         loadCSS: ['$ocLazyLoad', function ($ocLazyLoad) {
