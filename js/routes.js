@@ -7,7 +7,7 @@
             '$breadcrumbProvider',
             '$httpProvider',
             function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $breadcrumbProvider, $httpProvider) { 
-                $urlRouterProvider.otherwise('/dashboard');
+                $urlRouterProvider.otherwise('/addemployee');
 
                 $ocLazyLoadProvider.config({
                     // Set to true if you want to see what and when is dynamically loaded
@@ -99,93 +99,31 @@
                     }
                 }
 
-                var skills = { 
-                    name: 'app.skills',
-                    url: '/skills',
-                    templateUrl: 'views/pages/skills.html',
+                var employee = {
+                    name: 'app.addemployee',
+                    url: '/addemployee',
+                    templateUrl: 'views/pages/employee.html',
                     data: {
-                        pageTitle: 'Skills'
+                        pageTitle: 'Employee Registration'
                     },
-                    controller: 'SkillsCtrl',
+                    controller: 'EmployeeCtrl',
                     ncyBreadcrumb: {
-                        label: 'Skills',
+                        label: 'Add Employee'
                     },
                     resolve: {
-                        loadMyService: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load('js/services/SkillsService.js');
-                        }],
-                        loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) { 
-                            //loading SkillsControllers to the view
-                            return $ocLazyLoad.load({
-                                files:['js/controllers/SkillsController.js']
-                            })
-                        }]
-                    }
-                }
-
-                var education = {
-                    name: 'app.education',
-                    url: '/education',
-                    templateUrl: 'views/pages/education.html',
-                    data: {
-                        pageTitle: 'Education'
-                    },
-                    controller: 'EducationCtrl',
-                    ncyBreadcrumb: {
-                        label: 'Education'
-                    },
-                    resolve: {
-                        loadMyService: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load('js/services/EducationService.js');
-                        }],
-                        loadCSS: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load({
-                                serie: true,
-                                name: 'dashboard-css',
-                                files:['css/dashboard.css']
-                            })   
-                        }],
-                        loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            // you can lazy load files for an existing module
-                            return $ocLazyLoad.load([{
-                                serie: true,
-                                name: 'Knob',
-                                files: ['https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js']
-                            }]);
-                        }],
-                        loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load({
-                                files: ['js/controllers/EducationController.js']
-                            })
-                        }]
-                    }
-                }
-
-                var experience = {
-                    name: 'app.experience',
-                    url: '/experience',
-                    templateUrl: 'views/pages/experience.html',
-                    data: {
-                        pageTitle:'Experience'
-                    },
-                    controller: 'ExperienceCtrl',
-                    ncyBreadcrumb: {
-                        label: 'Experience'
-                    },
-                    resolve: {
-                        loadMyService: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load('js/services/ExperienceService.js');
-                        }],
+                        // loadMyService: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        //     return $ocLazyLoad.load('js/services/ExperienceService.js');
+                        // }],
                         loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load([{
-                                files:[ 'js/controllers/ExperienceController.js' ]
+                                files: ['/js/controllers/EmployeeController.js']
                             }])
                         }],
                         loadCSS: ['$ocLazyLoad', function ($ocLazyLoad) {
                             return $ocLazyLoad.load({
                                 serie: true,
                                 name: 'dashboard-css',
-                                files:['css/dashboard.css']
+                                files: ['css/dashboard.css']
                             })
                         }]
                     }
@@ -194,9 +132,7 @@
                 $stateProvider
                     .state(appState)
                     .state(dashboard) 
-                    .state(skills)
-                    .state(education)
-                    .state(experience)
+                    .state(employee)
                 
                 // $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
                 $httpProvider.defaults.useXDomain = true;
