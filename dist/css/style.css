@@ -9496,3 +9496,40 @@ img {
     display: block !important; }
   .sidebar-collapsed-mobile .nav-title {
     display: block !important; }
+
+header .d-md-down-none {
+  margin-left: 40px;
+  margin-right: 40px; }
+
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 1.25rem; }
+
+.form-check-input {
+  position: absolute;
+  margin-top: .3rem;
+  margin-left: -1.25rem; }
+
+.form-check-input:disabled ~ .form-check-label {
+  color: #536c79; }
+
+.form-check-label {
+  margin-bottom: 0; }
+
+.form-check-inline {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 0;
+  margin-right: .75rem; }
+
+.form-check-inline .form-check-input {
+  position: static;
+  margin-top: 0;
+  margin-right: .3125rem;
+  margin-left: 0; }
+
+.form-check.form-check-inline.mr-1 {
+  width: 20%; }
